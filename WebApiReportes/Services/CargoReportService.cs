@@ -9,11 +9,8 @@ namespace WebApiReportes.Services
     {
         public static void Load(LocalReport report, IEnumerable<Cargo> cargos) 
         {
-            // Crear la instancia del reporte
-            // var report = new LocalReport();
-
-            // Verifica la ruta correcta al archivo RDLC
-            var rdlcPath = "WebApiReportes.reporte.Report1.rdlc";
+                       // Verifica la ruta correcta al archivo RDLC
+            var rdlcPath = "WebApiReportes.reports.Report3.rdlc";
 
             // Cargar el archivo RDLC (asegúrate de que el path o recurso embebido sea correcto)
         
@@ -30,8 +27,8 @@ namespace WebApiReportes.Services
             DataTable dt = new DataTable("Cargo");
             dt.Columns.Add("id", typeof(string)); // Asegúrate de que los nombres coincidan
             dt.Columns.Add("nombre", typeof(string));
-            dt.Columns.Add("created_at", typeof(string));
-            dt.Columns.Add("updated_at", typeof(string));
+            dt.Columns.Add("created_at", typeof(DateTime));
+            dt.Columns.Add("updated_at", typeof(DateTime));
 
             foreach (var cargo in cargos)
             {

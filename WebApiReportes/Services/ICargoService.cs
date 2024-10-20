@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.Reporting.NETCore;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using WebApiReportes.models;
 
@@ -11,5 +12,7 @@ namespace WebApiReportes.Services
         Task AddCargoAsync(Cargo cargo);
         Task UpdateCargoAsync(Cargo cargo);
         Task DeleteCargoAsync(int id);
+
+        Task GetReporteCargosAsync(LocalReport report, IEnumerable<Cargo> cargos);
     }
 }

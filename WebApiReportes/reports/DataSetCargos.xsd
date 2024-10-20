@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetCargos" targetNamespace="http://tempuri.org/DataSetCargos.xsd" xmlns:mstns="http://tempuri.org/DataSetCargos.xsd" xmlns="http://tempuri.org/DataSetCargos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetCargos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetCargos" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetCargos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="cargos" msprop:Generator_RowEvHandlerName="cargosRowChangeEventHandler" msprop:Generator_RowDeletedName="cargosRowDeleted" msprop:Generator_RowDeletingName="cargosRowDeleting" msprop:Generator_RowEvArgName="cargosRowChangeEvent" msprop:Generator_TablePropName="cargos" msprop:Generator_RowChangedName="cargosRowChanged" msprop:Generator_UserTableName="cargos" msprop:Generator_RowChangingName="cargosRowChanging" msprop:Generator_RowClassName="cargosRow" msprop:Generator_TableClassName="cargosDataTable" msprop:Generator_TableVarName="tablecargos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" type="xs:string" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="created_at" msprop:Generator_ColumnPropNameInRow="created_at" msprop:Generator_ColumnPropNameInTable="created_atColumn" msprop:Generator_ColumnVarNameInTable="columncreated_at" msprop:Generator_UserColumnName="created_at" type="xs:string" minOccurs="0" />
+              <xs:element name="updated_at" msprop:Generator_ColumnPropNameInRow="updated_at" msprop:Generator_ColumnPropNameInTable="updated_atColumn" msprop:Generator_ColumnVarNameInTable="columnupdated_at" msprop:Generator_UserColumnName="updated_at" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

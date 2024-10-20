@@ -14,14 +14,12 @@ namespace WebApiReportes.Controllers
     public class CargoController : ControllerBase
     {
         private readonly ICargoService _cargoService;
-        private readonly CargoReportService _cargoReportService;
-
+       
 
         public CargoController(ICargoService cargoService)
         {
             _cargoService = cargoService;
-            _cargoReportService = new CargoReportService();
-
+         
         }
 
         // GET: api/Cargo
@@ -77,29 +75,16 @@ namespace WebApiReportes.Controllers
         [HttpGet("reporte")]
         public async Task<IActionResult> GenerarReporteCargos(string format = "PDF", string extension = "pdf")
         {
-            /* // Configura la licencia
-             QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
-
-             // Obtener la lista de cargos a través del servicio
-             var cargos = await _cargoService.GetAllCargosAsync();
-
-             var reporte = new ReporteCargos(cargos); // Instancia de la clase del reporte
-
-             // Generar el PDF en memoria
-             using (var memoryStream = new MemoryStream())
-             {
-                 reporte.GeneratePdf(memoryStream);
-                 var pdfBytes = memoryStream.ToArray();
-
-                 // Retornar el PDF como un archivo descargable
-                 return File(pdfBytes, "application/pdf", "reporte.pdf");
-             }*/
+          
             // Obtener los datos de cargos desde la base de datos
             var cargos = await _cargoService.GetAllCargosAsync();
             // Crear el reporte usando el servicio de reporte
             using var report = new LocalReport();
             // Usar ReportViewerCore.Report para cargar el reporte
-            WebApiReportes.Services.CargoReportService.Load(report, cargos);
+            //_cargoService.getre(report, cargos);
+
+            await _cargoService.GetReporteCargosAsync(report,cargos);
+
             // Renderizar el reporte como PDF
             var pdf = report.Render("PDF", null, out _, out _, out _, out _, out _);
 

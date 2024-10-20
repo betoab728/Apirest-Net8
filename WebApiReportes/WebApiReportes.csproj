@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="reporte\Report1.rdlc" />
-    <None Remove="reports\Report1.rdlc" />
+    <None Remove="reports\ReporteCargos.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="reports\ReporteCargos.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,8 +29,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="reporte\Report1.rdlc" />
-    <EmbeddedResource Include="reports\Report1.rdlc" />
+    <Compile Update="reports\DataSetCargos.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSetCargos.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="reports\DataSetCargos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCargos.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>
